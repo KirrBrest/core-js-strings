@@ -169,9 +169,19 @@ function repeatString(str, times) {
  */
 function removeFirstOccurrences(str, value) {
   // throw new Error('Not implemented');
-  let string = str.indexOf(value);
-  // const string = str.slice(0 - ind, ind);
-  string = str.replace(value, '');
+  // let string = str.indexOf(value);
+  // string = str.replace(value, '');
+
+  const ind = str.indexOf(value);
+  const arr = str.split('');
+  let string;
+  if (ind >= 0) {
+    const arr1 = arr.splice(ind, value.length);
+    console.log(arr1);
+    string = arr.join('');
+  } else {
+    string = str;
+  }
   return string;
 }
 
@@ -187,8 +197,19 @@ function removeFirstOccurrences(str, value) {
  *   removeLastOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeLastOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeLastOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
+function removeLastOccurrences(str, value) {
+  // throw new Error('Not implemented');
+  const ind = str.lastIndexOf(value);
+  const arr = str.split('');
+  let string;
+  if (ind >= 0) {
+    const arr1 = arr.splice(ind, value.length);
+    console.log(arr1);
+    string = arr.join('');
+  } else {
+    string = str;
+  }
+  return string;
 }
 
 /**
