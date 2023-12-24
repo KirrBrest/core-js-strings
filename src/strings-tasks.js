@@ -176,8 +176,7 @@ function removeFirstOccurrences(str, value) {
   const arr = str.split('');
   let string;
   if (ind >= 0) {
-    const arr1 = arr.splice(ind, value.length);
-    console.log(arr1);
+    arr.splice(ind, value.length);
     string = arr.join('');
   } else {
     string = str;
@@ -203,8 +202,7 @@ function removeLastOccurrences(str, value) {
   const arr = str.split('');
   let string;
   if (ind >= 0) {
-    const arr1 = arr.splice(ind, value.length);
-    console.log(arr1);
+    arr.splice(ind, value.length);
     string = arr.join('');
   } else {
     string = str;
