@@ -552,6 +552,7 @@ function encodeToRot13(str) {
   return encoded;
 }
 
+
 /**
  * Returns playid card id.
  *
